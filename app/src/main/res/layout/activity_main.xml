@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/light_green"
+        app:layout_constraintBottom_toTopOf="@+id/layout_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44sp"
+            android:gravity="center"
+            android:text="Enter One Time Password"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_otp"
+        android:layout_width="178dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="40sp"
+            android:layout_height="42sp"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:nextFocusRight="@+id/editText_two">
+
+            <requestFocus />
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="40sp"
+            android:layout_height="42sp"
+            android:inputType="numberPassword"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="40sp"
+            android:layout_height="42sp"
+            android:inputType="numberPassword"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="40sp"
+            android:layout_height="42sp"
+            android:inputType="numberPassword"
+            android:maxLength="1" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="42sp"
+        android:layout_below="@+id/layout_otp"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
